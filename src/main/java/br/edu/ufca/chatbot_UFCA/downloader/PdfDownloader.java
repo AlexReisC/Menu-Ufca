@@ -41,7 +41,7 @@ public class PdfDownloader implements Job {
 			logger.info("Semana atual: Inicio {} e Fim {}", inicioSemana, fimSemana);
 			
 			int diaDoMes = LocalDate.now().getDayOfMonth();
-			if(!(diaDoMes >= inicioSemana.intValue() && diaDoMes <= fimSemana.intValue())){
+			if(diaDoMes < inicioSemana.intValue()){
 				logger.info("Cardapio desta semana ainda nao postado!");
 				return;
 			}
