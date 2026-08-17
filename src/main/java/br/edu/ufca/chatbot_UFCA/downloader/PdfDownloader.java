@@ -32,7 +32,7 @@ public class PdfDownloader implements Job {
 		try {
 			doc = Jsoup.connect(UFCA_SITE).get();
 			
-			String semanaAtual = doc.select("div.title").last().lastChild().toString();
+			String semanaAtual = doc.select("div.title").first().lastChild().toString();
 			logger.info(semanaAtual);
 
 			int indice = semanaAtual.indexOf("o");
