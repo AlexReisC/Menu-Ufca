@@ -46,7 +46,7 @@ public class PdfDownloader implements Job {
 				return;
 			}
 
-			Element botaoDownload = doc.select("a.ui.teal.button").last();
+			Element botaoDownload = doc.select("a.ui.teal.button").first();
 			if(botaoDownload == null) {
 				logger.error("URL do PDF nao encontrado na pagina");
 				return;
